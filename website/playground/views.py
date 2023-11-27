@@ -1,5 +1,9 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from django.core.exceptions import ImproperlyConfigured
+from django.http import HttpResponseRedirect
+from django.template.response import TemplateResponse
+from django.views.generic import View
 # more like request handler
 
 # request -> response
@@ -14,7 +18,11 @@ def say_hello(request):
     #return HttpResponse('Hello World')
     return render(request, 'hello.html', {'name': 'Mosh'})
 
+def main (request):
+    return render(request, 'index.html')
 
+def badminton (request):
+    return render(request, 'badminton.html')
 
 #note: this is where we want to pull data from db
 def quicksort(arr):
