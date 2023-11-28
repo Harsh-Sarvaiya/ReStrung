@@ -12,7 +12,7 @@ class stringers(models.Model):
     emailAddress = models.EmailField()
 
     class rating(models.IntegerChoices):
-        zero = 0
+        zero= 0
         one = 1
         two = 2
         three = 3
@@ -24,7 +24,7 @@ class stringers(models.Model):
     numberOfLifeTimeCustomers = models.CharField(max_length = 10)
     dateJoined = models.DateTimeField(auto_now_add = True)
 
-    
+
     class sport(models.IntegerChoices):
         badminton = 1
         tennis = 2

@@ -4,6 +4,7 @@ from django.core.exceptions import ImproperlyConfigured
 from django.http import HttpResponseRedirect
 from django.template.response import TemplateResponse
 from django.views.generic import View
+from .models import stringers
 # more like request handler
 
 # request -> response
@@ -17,6 +18,10 @@ def say_hello(request):
     #send data
     #return HttpResponse('Hello World')
     return render(request, 'hello.html', {'name': 'Mosh'})
+
+def full_stringer_list(request):
+    stringers = stringers.objects.all().order_by('sport')
+    return render(request, 'full_string_list.html', { 'stringers':stringers})
 
 def main (request):
     return render(request, 'index.html')
