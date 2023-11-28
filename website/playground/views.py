@@ -24,6 +24,14 @@ def main (request):
 def badminton (request):
     return render(request, 'badminton.html')
 
+def squash(request):
+    return render(request, 'squash.html')
+
+def tennis(request):
+    return render(request, 'tennis.html')
+
+
+
 #note: this is where we want to pull data from db
 def quicksort(arr):
     if len(arr) <= 1:
