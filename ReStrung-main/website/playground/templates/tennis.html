@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Tennis Stringer Listings - ReStrung</title>
+    <style>
+        /* Reset default margin and padding */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+        }
+
+        /* Header styles */
+        header {
+            text-align: center;
+            padding: 50px 0;
+            background-color: #333;
+            color: #fff;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        /* Buttons row styles */
+        .button-row {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .button {
+            margin: 0 10px;
+            padding: 8px 20px;
+            border: none;
+            border-radius: 3px;
+            background-color: #333;
+            color: #fff;
+            text-decoration: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .button:hover {
+            background-color: #555;
+        }
+
+        /* Listings styles */
+        .listing-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .stringer-card {
+            background-color: #fff;
+            margin: 20px;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            text-align: center;
+        }
+
+        .stringer-card h2 {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+
+        .stringer-card p {
+            font-size: 1.1em;
+            color: #555;
+        }
+
+        .stringer-card .contact-btn {
+            margin-top: 15px;
+            padding: 8px 20px;
+            border: none;
+            border-radius: 3px;
+            background-color: #333;
+            color: #fff;
+            text-decoration: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .stringer-card .contact-btn:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <h1>Tennis Stringer Listings</h1>
+    </header>
+    <!-- Buttons Row -->
+    <div class="button-row">
+        <a href="tennis_cost" class="button">Cost</a>
+        <a href="tennis_rating" class="button">Rating</a>
+        <a href="tennis_cust" class="button">Customers Served</a>
+    </div>
+    <!-- Listing Section -->
+    <div class="listing-container">
+
+        <!-- Stringer Card - Example 1
+        <div class="stringer-card">
+            <h2>John Doe</h2>
+            <p>Experience: 5 years</p>
+            <p>Location: City, Country</p>
+            <a href="mailto:john@example.com" class="contact-btn">Contact</a>
+        </div> 
+
+            Stringer Card - Example 2
+        <div class="stringer-card">
+            <h2>Jane Smith</h2>
+            <p>Experience: 8 years</p>
+            <p>Location: City, Country</p>
+            <a href="mailto:jane@example.com" class="contact-btn">Contact</a>
+        </div> -->
+        {% for stringer in stringers %}
+        <div class="stringer-card">
+            <h2>{{stringer.fullName}}</h2>
+            <p>Rating: {{stringer.rating}}</p>
+            <p>Cost: {{stringer.cost}}</p>
+            <p>Customers Served: {{stringer.numberOfLifeTimeCustomers}}</p>
+            <a href="mailto:{{stringer.emailAddress}}" class="contact-btn">Contact</a>
+        </div>
+        {% endfor %}
+
+        <!-- Add more stringer cards as needed -->
+        <!-- Example: Copy the structure of the stringer card and modify details -->
+
+    </div>
+
+</body>
+
+</html>
