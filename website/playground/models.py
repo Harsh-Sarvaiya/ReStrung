@@ -31,5 +31,17 @@ class stringers(models.Model):
         squash = 3
     sport = models.IntegerField(choices = sport.choices)
 
+class customers(models.Model):
+    fullName = models.CharField(max_length = 100)
+    streetAddress = models.CharField(max_length = 250)
+    city = models.CharField(max_length = 100)
+    province = models.CharField(max_length = 2) #add picking fields in the future https://docs.djangoproject.com/en/4.2/topics/db/models/#field-types
+    postalCode = models.CharField(max_length = 6)
+    phoneNumber = models.CharField(max_length = 10)
+    emailAddress = models.EmailField()
+    dateOfBirth = models.DateField()
+
+    dateJoined = models.DateTimeField(auto_now_add = True)
+
     def __str__(self):
         return self.fullName
