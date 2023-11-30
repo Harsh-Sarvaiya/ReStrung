@@ -13,5 +13,8 @@ urlpatterns = [
         path('main/squash', views.squash),
         path('main/tennis_cust',views.stringer_tennis_cust),
         path('main/tennis_rating', views.stringer_tennis_rating),
-        path('main/tennis_cost', views.stringer_tennis_cost)
+        path('main/tennis_cost', views.stringer_tennis_cost),
+        path('main/squash_cust', views.stringer_squash_cust),
+        path('main/squash_cost', views.stringer_squash_cost),
+        path('main/squash_rating', views.stringer_squash_rating)
 ]
