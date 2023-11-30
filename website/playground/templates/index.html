@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -23,7 +24,7 @@
             background-color: #333;
             color: #fff;
             text-align: center;
-            padding: 15px 0;
+            padding: 5px 0;
         }
 
         nav ul {
@@ -33,6 +34,12 @@
         nav ul li {
             display: inline;
             margin: 0 10px;
+        }
+
+        nav li img {
+            display: block;
+            margin-bottom: -20px;
+            margin-top: -20px;
         }
 
         nav ul li a {
@@ -128,14 +135,17 @@
             background-color: #555;
         }
 
+        
     </style>
 </head>
 
 <body>
-
+    
+    
     <!-- Navigation Section -->
     <nav>
         <ul>
+            <li><img src="{% static 'Restring.png' %}" alt="" width="75" height="75"></li>
             <li><a href="#home">Home</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#services">Services</a></li>
