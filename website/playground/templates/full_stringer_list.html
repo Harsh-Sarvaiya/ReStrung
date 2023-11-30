@@ -8,9 +8,12 @@
 <body>
     <h1>full stringer list</h1>
     <div class = "stringers">
-        {% for stringer in stringers %}
+        {% for stringer in stringersdata %}
         <div class="stringers">
-            <h2><a href = '#'></a> </h2></he>
+            <h2><a href = '#'>{{stringer.fullName}}</a> </h2>
+            <p>{{stringer.dateJoined}}</p>
+            <p>{{stringer.sport}}</p>
+            <p>{{stringer.cost}}</p>
         </div>
     {% endfor %}
     </div>

@@ -20,8 +20,8 @@ def say_hello(request):
     return render(request, 'hello.html', {'name': 'Mosh'})
 
 def full_stringer_list(request):
-    stringers = stringers.objects.all().order_by('sport')
-    return render(request, 'full_string_list.html', { 'stringers':stringers})
+    stringersdata = stringers.objects.all().order_by('sport')
+    return render(request, 'full_stringer_list.html', { 'stringers':stringersdata})
 
 def main (request):
     return render(request, 'index.html')
