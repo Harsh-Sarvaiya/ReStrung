@@ -31,6 +31,9 @@ class stringers(models.Model):
         squash = 3
     sport = models.IntegerField(choices = sport.choices)
 
+    def __str__(self):
+        return self.fullName
+
 class customers(models.Model):
     fullName = models.CharField(max_length = 100)
     streetAddress = models.CharField(max_length = 250)
