@@ -32,7 +32,7 @@ class stringers(models.Model):
     sport = models.IntegerField(choices = sport.choices)
 
     def __str__(self):
-        return self.fullName
+            return self.fullName
 
 class customers(models.Model):
     fullName = models.CharField(max_length = 100)
