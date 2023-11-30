@@ -106,6 +106,28 @@
         footer p {
             margin: 0;
         }
+
+        .button-row {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .button {
+            margin: 0 10px;
+            padding: 8px 20px;
+            border: none;
+            border-radius: 3px;
+            background-color: #333;
+            color: #fff;
+            text-decoration: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .button:hover {
+            background-color: #555;
+        }
+
     </style>
 </head>
 
@@ -128,16 +150,21 @@
         <!-- Add any other content or call-to-action buttons here -->
     </header>
 
-    <!-- Features Section -->
+    <!-- Features Section
     <section id="features">
         <h2>Choose your Sport</h2>
         <ul>
             <li><a href="tennis">Tennis</a></li>
             <li><a href="badminton">Badminton</a></li>
             <li><a href="squash">Squash</a></li>
-            <!-- Add more features or details here -->
         </ul>
-    </section>
+    </section> -->
+
+    <div class="button-row">
+        <a href="tennis" class="button">Tennis</a>
+        <a href="badminton" class="button">Badminton</a>
+        <a href="squash" class="button">Squash</a>
+    </div>
 
     <!-- Contact Section -->
     <section id="contact">
