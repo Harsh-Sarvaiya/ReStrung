@@ -42,11 +42,6 @@ def stringer_badminton_rating(request):
 def squash(request):
     return render(request, 'squash.html')
 
-def tennis(request):
-    stringerdata = stringers.objects.all().order_by('fullName')
-    return render(request, 'tennis.html', { 'stringers': stringerdata})
-    return render(request, 'tennis.html')
-
 def stringer_tennis_cust(request):
     stringerdata = stringers.objects.all().order_by('numberOfLifeTimeCustomers')
     return render(request, 'tennis.html', { 'stringers': stringerdata})
