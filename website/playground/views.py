@@ -24,53 +24,53 @@ def main (request):
 
 #Badminton Views
 def badminton (request):
-    stringerdata = stringers.objects.all().order_by('fullName')
+    stringerdata = stringers.objects.filter(sport=1).order_by('fullName')
     return render(request, 'badminton.html', { 'stringers': stringerdata})
 
 def stringer_badminton_cust(request):
-    stringerdata = stringers.objects.all().order_by('numberOfLifeTimeCustomers')
+    stringerdata = stringers.objects.filter(sport=1).order_by('numberOfLifeTimeCustomers')
     return render(request, 'badminton.html', { 'stringers': stringerdata})
 
 def stringer_badminton_cost(request):
-    stringerdata = stringers.objects.all().order_by('cost')
+    stringerdata = stringers.objects.filter(sport=1).order_by('cost')
     return render(request, 'badminton.html', { 'stringers': stringerdata})
 
 def stringer_badminton_rating(request):
-    stringerdata = stringers.objects.all().order_by('rating')
+    stringerdata = stringers.objects.filter(sport=1).order_by('rating')
     return render(request, 'badminton.html', { 'stringers': stringerdata})
 
 #Tennis Views
 def tennis(request):
-    stringerdata = stringers.objects.all().order_by('fullName')
+    stringerdata = stringers.objects.filter(sport=2).order_by('fullName')
     return render(request, 'tennis.html', { 'stringers': stringerdata})
     
 def stringer_tennis_cust(request):
-    stringerdata = stringers.objects.all().order_by('numberOfLifeTimeCustomers')
+    stringerdata = stringers.objects.filter(sport=2).order_by('numberOfLifeTimeCustomers')
     return render(request, 'tennis.html', { 'stringers': stringerdata})
 
 def stringer_tennis_cost(request):
-    stringerdata = stringers.objects.all().order_by('cost')
+    stringerdata = stringers.objects.filter(sport=2).order_by('cost')
     return render(request, 'tennis.html', { 'stringers': stringerdata})
 
 def stringer_tennis_rating(request):
-    stringerdata = stringers.objects.all().order_by('rating')
+    stringerdata = stringers.objects.filter(sport=2).order_by('rating')
     return render(request, 'tennis.html', { 'stringers': stringerdata})
 
 #Squash Views
 def squash (request):
-    stringerdata = stringers.objects.all().order_by('fullName')
+    stringerdata = stringers.objects.filter(sport=3).order_by('fullName')
     return render(request, 'squash.html', { 'stringers': stringerdata})
     
 def stringer_squash_cust(request):
-    stringerdata = stringers.objects.all().order_by('numberOfLifeTimeCustomers')
+    stringerdata = stringers.objects.filter(sport=3).order_by('numberOfLifeTimeCustomers')
     return render(request, 'squash.html', { 'stringers': stringerdata})
 
 def stringer_squash_cost(request):
-    stringerdata = stringers.objects.all().order_by('cost')
+    stringerdata = stringers.objects.filter(sport=3).order_by('cost')
     return render(request, 'squash.html', { 'stringers': stringerdata})
 
 def stringer_squash_rating(request):
-    stringerdata = stringers.objects.all().order_by('rating')
+    stringerdata = stringers.objects.filter(sport=3).order_by('rating')
     return render(request, 'squash.html', { 'stringers': stringerdata})
 
 #note: this is where we want to pull data from db
