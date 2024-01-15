@@ -12,7 +12,7 @@ class stringers(models.Model):
     emailAddress = models.EmailField()
 
     class rating(models.IntegerChoices):
-        zero= 0
+        zero = 0
         one = 1
         two = 2
         three = 3

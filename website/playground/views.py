@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from django.core.exceptions import ImproperlyConfigured
 from django.http import HttpResponseRedirect
@@ -17,6 +17,14 @@ def say_hello(request):
     #transform 
     #send data
     #return HttpResponse('Hello World')
+
+    #stringers for proximity
+    #delivery
+    #24 hour service priority
+    #big companies take longer
+    #tournament hosting mobile stringing on site
+    #right now, people are delivering rackets to smits house. smit would need 3 dollars extra per job to be able to pick up and delivery
+    #People at clubs like modu, bactive, and derrick get it done at their own pace.
     return render(request, 'hello.html', {'name': 'Mosh'})
 
 def main (request):
